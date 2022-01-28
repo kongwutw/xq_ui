@@ -1,98 +1,4 @@
 @charset "UTF-8";
-.xq-switch {
-  height: 22px;
-  width: 44px;
-  border: none;
-  background: #dbdbdb;
-  border-radius: 12px;
-  position: relative;
-  cursor: pointer;
-  /* 解决移动端点击时有边框 */
-  outline: none;
-  -webkit-tap-highlight-color: #fff;
-  -webkit-tap-highlight-color: transparent;
-}
-.xq-switch-disabled {
-  cursor: not-allowed;
-  opacity: 0.5;
-}
-.xq-switch:focus {
-  outline: none;
-}
-.xq-switch > span {
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  height: 18px;
-  width: 18px;
-  background: white;
-  border-radius: 12px;
-  transition: all 250ms;
-}
-.xq-switch.xq-switch-checked {
-  background: #18a058;
-}
-.xq-switch.xq-switch-checked > span {
-  left: calc(100% - 18px - 2px);
-}
-.xq-switch.xq-switch-checked.xq-switch-small > span {
-  left: calc(100% - 12px - 2px);
-}
-.xq-switch.xq-switch-checked.xq-switch-large > span {
-  left: calc(100% - 26px - 2px);
-}
-.xq-switch:active > span {
-  width: 22px;
-}
-.xq-switch:active.xq-switch-small > span {
-  width: 16px;
-}
-.xq-switch:active.xq-switch-large > span {
-  width: 30px;
-}
-.xq-switch.xq-switch-checked:active > span {
-  width: 22px;
-  margin-left: -4px;
-}
-.xq-switch.xq-switch-checked:active.xq-switch-small > span {
-  width: 16px;
-  margin-left: -4px;
-}
-.xq-switch.xq-switch-checked:active.xq-switch-large > span {
-  width: 30px;
-  margin-left: -4px;
-}
-.xq-switch.xq-switch-small {
-  height: 16px;
-  width: 32px;
-  border-radius: 8px;
-}
-.xq-switch.xq-switch-small > span {
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  height: 12px;
-  width: 12px;
-  background: white;
-  border-radius: 8px;
-  transition: all 250ms;
-}
-.xq-switch.xq-switch-large {
-  height: 30px;
-  width: 60px;
-  border-radius: 17.3333333333px;
-}
-.xq-switch.xq-switch-large > span {
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  height: 26px;
-  width: 26px;
-  background: white;
-  border-radius: 17.3333333333px;
-  transition: all 250ms;
-}
-
 .xq-dialog {
   box-sizing: border-box;
   border-radius: 3px;
@@ -423,6 +329,100 @@
     transform: rotate(360deg);
   }
 }
+.xq-switch {
+  height: 22px;
+  width: 44px;
+  border: none;
+  background: #dbdbdb;
+  border-radius: 12px;
+  position: relative;
+  cursor: pointer;
+  /* 解决移动端点击时有边框 */
+  outline: none;
+  -webkit-tap-highlight-color: #fff;
+  -webkit-tap-highlight-color: transparent;
+}
+.xq-switch-disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+.xq-switch:focus {
+  outline: none;
+}
+.xq-switch > span {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 18px;
+  width: 18px;
+  background: white;
+  border-radius: 12px;
+  transition: all 250ms;
+}
+.xq-switch.xq-switch-checked {
+  background: #18a058;
+}
+.xq-switch.xq-switch-checked > span {
+  left: calc(100% - 18px - 2px);
+}
+.xq-switch.xq-switch-checked.xq-switch-small > span {
+  left: calc(100% - 12px - 2px);
+}
+.xq-switch.xq-switch-checked.xq-switch-large > span {
+  left: calc(100% - 26px - 2px);
+}
+.xq-switch:active > span {
+  width: 22px;
+}
+.xq-switch:active.xq-switch-small > span {
+  width: 16px;
+}
+.xq-switch:active.xq-switch-large > span {
+  width: 30px;
+}
+.xq-switch.xq-switch-checked:active > span {
+  width: 22px;
+  margin-left: -4px;
+}
+.xq-switch.xq-switch-checked:active.xq-switch-small > span {
+  width: 16px;
+  margin-left: -4px;
+}
+.xq-switch.xq-switch-checked:active.xq-switch-large > span {
+  width: 30px;
+  margin-left: -4px;
+}
+.xq-switch.xq-switch-small {
+  height: 16px;
+  width: 32px;
+  border-radius: 8px;
+}
+.xq-switch.xq-switch-small > span {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 12px;
+  width: 12px;
+  background: white;
+  border-radius: 8px;
+  transition: all 250ms;
+}
+.xq-switch.xq-switch-large {
+  height: 30px;
+  width: 60px;
+  border-radius: 17.3333333333px;
+}
+.xq-switch.xq-switch-large > span {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 26px;
+  width: 26px;
+  background: white;
+  border-radius: 17.3333333333px;
+  transition: all 250ms;
+}
+
 .xq-avatar {
   background-color: #c0c4cc;
   display: inline-flex;
