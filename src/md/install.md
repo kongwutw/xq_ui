@@ -3,7 +3,7 @@
 
 ```shell
 # NPM
-$ npm install xq-ui
+$ npm install @xqart/xq-ui
 ```
 或
 ```shell
