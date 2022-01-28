@@ -1,0 +1,468 @@
+@charset "UTF-8";
+.xq-switch {
+  height: 22px;
+  width: 44px;
+  border: none;
+  background: #dbdbdb;
+  border-radius: 12px;
+  position: relative;
+  cursor: pointer;
+  /* 解决移动端点击时有边框 */
+  outline: none;
+  -webkit-tap-highlight-color: #fff;
+  -webkit-tap-highlight-color: transparent;
+}
+.xq-switch-disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+.xq-switch:focus {
+  outline: none;
+}
+.xq-switch > span {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 18px;
+  width: 18px;
+  background: white;
+  border-radius: 12px;
+  transition: all 250ms;
+}
+.xq-switch.xq-switch-checked {
+  background: #18a058;
+}
+.xq-switch.xq-switch-checked > span {
+  left: calc(100% - 18px - 2px);
+}
+.xq-switch.xq-switch-checked.xq-switch-small > span {
+  left: calc(100% - 12px - 2px);
+}
+.xq-switch.xq-switch-checked.xq-switch-large > span {
+  left: calc(100% - 26px - 2px);
+}
+.xq-switch:active > span {
+  width: 22px;
+}
+.xq-switch:active.xq-switch-small > span {
+  width: 16px;
+}
+.xq-switch:active.xq-switch-large > span {
+  width: 30px;
+}
+.xq-switch.xq-switch-checked:active > span {
+  width: 22px;
+  margin-left: -4px;
+}
+.xq-switch.xq-switch-checked:active.xq-switch-small > span {
+  width: 16px;
+  margin-left: -4px;
+}
+.xq-switch.xq-switch-checked:active.xq-switch-large > span {
+  width: 30px;
+  margin-left: -4px;
+}
+.xq-switch.xq-switch-small {
+  height: 16px;
+  width: 32px;
+  border-radius: 8px;
+}
+.xq-switch.xq-switch-small > span {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 12px;
+  width: 12px;
+  background: white;
+  border-radius: 8px;
+  transition: all 250ms;
+}
+.xq-switch.xq-switch-large {
+  height: 30px;
+  width: 60px;
+  border-radius: 17.3333333333px;
+}
+.xq-switch.xq-switch-large > span {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 26px;
+  width: 26px;
+  background: white;
+  border-radius: 17.3333333333px;
+  transition: all 250ms;
+}
+
+.xq-dialog {
+  box-sizing: border-box;
+  border-radius: 3px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+.xq-dialog-overlay {
+  background-color: #00000080;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  z-index: 10;
+}
+.xq-dialog-wrapper {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 11;
+  max-width: calc(100vw - 32px);
+  width: 446px;
+  background: white;
+}
+.xq-dialog-wrapper > header {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+}
+.xq-dialog-wrapper > main {
+  padding: 30px 20px;
+}
+.xq-dialog-wrapper > footer {
+  padding: 20px;
+  text-align: right;
+}
+.xq-dialog-wrapper > footer .xq-button + .xq-button {
+  margin-left: 12px;
+}
+.xq-dialog-wrapper-close {
+  position: relative;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+.xq-dialog-wrapper-close::before, .xq-dialog-wrapper-close::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  background: black;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+}
+.xq-dialog-wrapper-close::before {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.xq-dialog-wrapper-close::after {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.xq-dialog-wrapper-close:hover::before, .xq-dialog-wrapper-close:hover:after {
+  background: #36ad6a;
+}
+
+.xq-button {
+  box-sizing: border-box;
+  height: 40px;
+  font-size: 14px;
+  background-color: #fff;
+  padding: 12px 20px;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+  transition: all 250ms;
+  color: #333;
+  border: 1px solid #d9d9d9;
+  user-select: none;
+}
+.xq-button:focus {
+  outline: none;
+}
+.xq-button::-moz-focus-inner {
+  border: 0;
+}
+.xq-button.is-circle.xq-button-default {
+  border-radius: 100%;
+  height: 40px;
+  width: 40px;
+}
+.xq-button.is-circle.xq-button-small {
+  border-radius: 100%;
+  height: 32px;
+  width: 32px;
+}
+.xq-button.is-circle.xq-button-large {
+  border-radius: 100%;
+  height: 48px;
+  width: 48px;
+}
+.xq-button.is-round.xq-button-default {
+  border-radius: 20px;
+}
+.xq-button.is-round.xq-button-large {
+  border-radius: 24px;
+}
+.xq-button.is-round.xq-button-small {
+  border-radius: 16px;
+}
+.xq-button.xq-theme-default:hover {
+  color: #18a058;
+  border-color: #18a058;
+}
+.xq-button.xq-theme-default:hover > .xq-loadingIndicator {
+  border-style: dashed;
+  border-color: #18a058 #18a058 #18a058 transparent;
+}
+.xq-button.xq-theme-default:active {
+  color: #0b4727;
+  border-color: #0b4727;
+}
+.xq-button.xq-theme-default:active > .xq-loadingIndicator {
+  border-style: dashed;
+  border-color: #0b4727 #0b4727 #0b4727 transparent;
+}
+.xq-button.xq-theme-default.is-dashed {
+  border-style: dashed;
+}
+.xq-button.xq-theme-default > .xq-loadingIndicator {
+  border-style: dashed;
+  border-color: #333 #333 #333 transparent;
+}
+.xq-button.xq-theme-primary {
+  background-color: #36ad6a;
+  border-color: #36ad6a;
+  color: #fff;
+}
+.xq-button.xq-theme-primary:hover {
+  background: #75d49f;
+  border-color: #75d49f;
+}
+.xq-button.xq-theme-primary:active {
+  background-color: #1e5f3a;
+  border-color: #1e5f3a;
+}
+.xq-button.xq-theme-primary.is-disabled {
+  cursor: not-allowed;
+  background: #75d49f;
+  border-color: #75d49f;
+}
+.xq-button.xq-theme-primary.is-disabled:hover {
+  background: #75d49f;
+  border-color: #75d49f;
+}
+.xq-button.xq-theme-primary.is-dashed {
+  border-style: dashed;
+  background-color: #fff !important;
+  color: #36ad6a;
+}
+.xq-button.xq-theme-primary.is-dashed > .xq-loadingIndicator {
+  border-style: dashed;
+  border-color: #36ad6a #36ad6a #36ad6a transparent;
+}
+.xq-button.xq-theme-info {
+  background-color: #4098fc;
+  border-color: #4098fc;
+  color: #fff;
+}
+.xq-button.xq-theme-info:hover {
+  background: #a4cefe;
+  border-color: #a4cefe;
+}
+.xq-button.xq-theme-info:active {
+  background-color: #0364d3;
+  border-color: #0364d3;
+}
+.xq-button.xq-theme-info.is-disabled {
+  cursor: not-allowed;
+  background: #a4cefe;
+  border-color: #a4cefe;
+}
+.xq-button.xq-theme-info.is-disabled:hover {
+  background: #a4cefe;
+  border-color: #a4cefe;
+}
+.xq-button.xq-theme-info.is-dashed {
+  border-style: dashed;
+  background-color: #fff !important;
+  color: #4098fc;
+}
+.xq-button.xq-theme-info.is-dashed > .xq-loadingIndicator {
+  border-style: dashed;
+  border-color: #4098fc #4098fc #4098fc transparent;
+}
+.xq-button.xq-theme-success {
+  background-color: #85ce61;
+  border-color: #85ce61;
+  color: #fff;
+}
+.xq-button.xq-theme-success:hover {
+  background: #c1e6af;
+  border-color: #c1e6af;
+}
+.xq-button.xq-theme-success:active {
+  background-color: #539930;
+  border-color: #539930;
+}
+.xq-button.xq-theme-success.is-disabled {
+  cursor: not-allowed;
+  background: #c1e6af;
+  border-color: #c1e6af;
+}
+.xq-button.xq-theme-success.is-disabled:hover {
+  background: #c1e6af;
+  border-color: #c1e6af;
+}
+.xq-button.xq-theme-success.is-dashed {
+  border-style: dashed;
+  background-color: #fff !important;
+  color: #85ce61;
+}
+.xq-button.xq-theme-success.is-dashed > .xq-loadingIndicator {
+  border-style: dashed;
+  border-color: #85ce61 #85ce61 #85ce61 transparent;
+}
+.xq-button.xq-theme-warning {
+  background-color: #f0a020;
+  border-color: #f0a020;
+  color: #fff;
+}
+.xq-button.xq-theme-warning:hover {
+  background: #f6c980;
+  border-color: #f6c980;
+}
+.xq-button.xq-theme-warning:active {
+  background-color: #9f660b;
+  border-color: #9f660b;
+}
+.xq-button.xq-theme-warning.is-disabled {
+  cursor: not-allowed;
+  background: #f6c980;
+  border-color: #f6c980;
+}
+.xq-button.xq-theme-warning.is-disabled:hover {
+  background: #f6c980;
+  border-color: #f6c980;
+}
+.xq-button.xq-theme-warning.is-dashed {
+  border-style: dashed;
+  background-color: #fff !important;
+  color: #f0a020;
+}
+.xq-button.xq-theme-warning.is-dashed > .xq-loadingIndicator {
+  border-style: dashed;
+  border-color: #f0a020 #f0a020 #f0a020 transparent;
+}
+.xq-button.xq-theme-error {
+  background-color: #d03050;
+  border-color: #d03050;
+  color: #fff;
+}
+.xq-button.xq-theme-error:hover {
+  background: #e38396;
+  border-color: #e38396;
+}
+.xq-button.xq-theme-error:active {
+  background-color: #7e1c30;
+  border-color: #7e1c30;
+}
+.xq-button.xq-theme-error.is-disabled {
+  cursor: not-allowed;
+  background: #e38396;
+  border-color: #e38396;
+}
+.xq-button.xq-theme-error.is-disabled:hover {
+  background: #e38396;
+  border-color: #e38396;
+}
+.xq-button.xq-theme-error.is-dashed {
+  border-style: dashed;
+  background-color: #fff !important;
+  color: #d03050;
+}
+.xq-button.xq-theme-error.is-dashed > .xq-loadingIndicator {
+  border-style: dashed;
+  border-color: #d03050 #d03050 #d03050 transparent;
+}
+.xq-button.xq-button-large {
+  font-size: 24px;
+  height: 48px;
+  padding: 0 16px;
+}
+.xq-button.xq-button-small {
+  font-size: 12px;
+  height: 32px;
+  padding: 0 8px;
+}
+.xq-button > .xq-loadingIndicator {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  margin-right: 4px;
+  border-radius: 8px;
+  border-color: #fff #fff #fff transparent;
+  border-style: solid;
+  border-width: 2px;
+  animation: xq-spin 1s infinite linear;
+}
+.xq-button > .slot-icon-left {
+  margin-right: 5px;
+}
+.xq-button > .slot-icon-right {
+  margin-left: 5px;
+}
+
+@keyframes xq-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.xq-avatar {
+  background-color: #c0c4cc;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #fff;
+}
+.xq-avatar > img {
+  width: 100%;
+  height: 100%;
+}
+
+.xq-avatar-small {
+  width: 24px;
+  height: 24px;
+}
+
+.xq-avatar-default {
+  width: 40px;
+  height: 40px;
+}
+
+.xq-avatar-large {
+  width: 56px;
+  height: 56px;
+}
+
+.xq-avatar-circle {
+  /* background-color: transparent; */
+  border-radius: 100%;
+}
+.xq-avatar-circle > img {
+  border-radius: 100%;
+}
+
+.xq-avatar-square {
+  /* background-color: transparent; */
+  border-radius: 3px;
+}
+.xq-avatar-square > img {
+  border-radius: 3px;
+}

@@ -1,12 +1,17 @@
 {
-  "name": "xq_ui",
+  "name": "@xqart/xq-ui",
   "version": "0.0.1",
   "files": [
     "dist/lib/*"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "start": "vite --host",
-    "build": "vite build"
+    "publish": "git add . && git commit -m 'feat: update docs' && git push",
+    "site": "rm -rf docs && vite build && npm run publish",
+    "lib": "rollup -c"
   },
   "dependencies": {
     "github-markdown-css": "^5.1.0",

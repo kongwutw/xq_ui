@@ -14,13 +14,13 @@ export default {
     globals: {
       vue: 'Vue'
     },
-    name: 'Yjw-ui',
-    file: 'dist/lib/yjw-ui.js',
+    name: 'xq-ui',
+    file: 'dist/lib/xq-ui.js',
     format: 'umd',
     plugins: [terser()]
   }, {
-    name: 'Yjw-ui',
-    file: 'dist/lib/yjw-ui.esm.js',
+    name: 'xq-ui',
+    file: 'dist/lib/xq-ui.esm.js',
     format: 'es',
     plugins: [terser()]
   }],
