@@ -1,6 +1,4 @@
-<preview>
-基础用法
-</preview>
+<preview>基础用法</preview>
 
 <template>
   <xq-switch v-model="checked" />

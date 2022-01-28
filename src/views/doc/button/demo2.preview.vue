@@ -1,4 +1,5 @@
 <preview>禁用</preview>
+
 <template>
   <xq-button theme="default" disabled>默认按钮</xq-button>
   <xq-button theme="primary" disabled>主要按钮</xq-button>

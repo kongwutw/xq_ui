@@ -1,4 +1,5 @@
 <preview>形状</preview>
+
 <template>
   <xq-avatar src="https://img.yibiankeji.com/logo/p/pLogo.png" shape="square" size="small" />
   <xq-avatar src="https://img.yibiankeji.com/logo/p/pLogo.png" shape="square" size="default" />

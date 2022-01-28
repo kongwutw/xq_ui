@@ -28,6 +28,8 @@ app.mount("#app");
 pnpm run site
 
 ## 更新组件库
+```
 pnpm run lib
 npm login --registry https://registry.npmjs.org
 npm publish --registry https://registry.npmjs.org
+```

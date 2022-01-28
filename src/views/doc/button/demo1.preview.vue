@@ -1,4 +1,5 @@
 <preview>基础</preview>
+
 <template>
   <div style="margin: 10px 0px; width: 100%">
     <xq-button theme="default">默认按钮</xq-button>
